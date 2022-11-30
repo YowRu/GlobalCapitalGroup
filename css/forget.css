@@ -1,0 +1,42 @@
+.top, .header .top {
+  max-width: 1000px;
+  width: 100%;
+  margin: 30px auto;
+  position: relative;
+  padding: 0 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .top a.back {
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+  font-size: 28px;
+  color: #bbb;
+}
+
+.header .top p {
+  height: 90px;
+  line-height: 90px;
+  font-size: 36px;
+  color: #999;
+}
+
+#main, body {
+  background-color: #fff;
+}
+
+#main {
+  height: 500px;
+  margin: 0 auto;
+}
+
+#main p.big {
+  font-size: 20px;
+  width: max-content;
+  color: rgb(108, 108, 108);
+}

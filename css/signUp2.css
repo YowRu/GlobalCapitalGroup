@@ -1,0 +1,16 @@
+header .right .top, header .right .bottom {
+  display: none;
+}
+
+.content {
+  height: auto;
+}
+
+.info {
+  justify-content: flex-start;
+}
+
+.info.login {
+  margin-top: -30px;
+  justify-content: center;
+}

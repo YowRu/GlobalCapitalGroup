@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7,9,10,11" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/loading.js"></script>
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/layout.css" type="text/css">
+    <link rel="stylesheet" href="font/flaticon.css" type="text/css">
+    <title>環球資本集團</title>
+</head>
+<body>
+<header></header>
+<div id="main">
+    <div class="banner">
+        <div class="left">
+            <img src="img/bannerText1.png" alt="" class="pc">
+            <img src="img/bannerTextMobile1.png" alt="" class="mobile">
+        </div>
+        <div class="right">
+            <img src="img/bannerPeople1.png" alt="" class="pc">
+            <img src="img/bannerPeople1.png" alt="" class="mobile">
+        </div>
+    </div>
+    <div class="row2">
+        <a href=""class="btn">開設真實帳戶</a>
+        <p>使用我們平台，隨時隨地進行交易。</p>
+    </div>
+    <div class="imgWP">
+        <div class="left">
+            <div class="top">
+                <p>
+                    <span class="big">HOLDING</span>
+                    <span>國際控股</span>
+                </p>
+            </div>
+            <div class="bottom">
+                <div class="left">
+                    <p>
+                        <span class="big">ASSET</span>
+                        <span>資產管理與資產開發</span>
+                    </p>
+                </div>
+                <div class="right">
+                    <p>
+                        <span class="big">BIG DATA</span>
+                        <span>大數據分析</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <p>
+                <span class="big">GROUP LAYOUT</span>
+                <span>集團版圖</span>
+            </p>
+        </div>
+    </div>
+    <div id="about">
+        <div class="title">
+            <p class="big">關於環球</p>
+            <p>About Us</p>
+        </div>
+        <div class="flex">
+            <div class="left big">立足台灣.佈局全球</div>
+            <div class="right">
+                <p class="bold big">創新金融的先驅者</p>
+                <p>網際網路技術蓬勃發展、多元運用至今，集團深耕國際化、 佈局全球腳步刻不容緩，積極發展互聯網、區塊鏈技術，開 啟創新思維、整合自有營運體系，為國際金融的劃時代改革 預先做好準備。</p>
+                <p class="bold big">企業診斷、企業輔導，大數據解決方案，化分析為商機</p>
+            </div>
+        </div>
+    </div>
+    <div id="advantage">
+        <div class="title">
+            <p class="big">環球優勢</p>
+            <p>Advantage</p>
+        </div>
+        <div class="flex">
+            <ul class="left">
+                <li>八年歷史</li>
+                <li>資金安全透明</li>
+                <li>合法合規經紀商</li>
+                <li>精準掌握國際脈動</li>
+                <li>安全便捷的出入金</li>
+                <li>24/5專門客服團隊</li>
+            </ul>
+            <div class="right"></div>
+        </div>
+    </div>
+    <div id="business">
+        <div class="title">
+            <p class="big">業務項目</p>
+            <p>Business Item</p>
+        </div>
+        <div class="flex">
+            <div class="left">
+                <p>股神巴菲特強調:「價值投資」</p>
+                <p>無論價格是上升或者下跌，只要長期持有皆有獲利機會</p>
+            </div>
+            <ul class="right">
+                <li>線上台股買賣服務</li>
+                <li>證券融資服務</li>
+                <li>網上交易平台</li>
+                <li>即時報價</li>
+                <li>股價監察表</li>
+                <li>市場資訊</li>
+                <li>配資方案</li>
+            </ul>
+        </div>
+    </div>
+    <div id="contact">
+        <div class="title">
+            <p class="big">聯絡我們</p>
+            <p>Contact Us</p>
+        </div>
+        <div class="contactWp">
+            <div class="left">
+                <div class="marginTop">
+                    <p>環球資本有限公司</p>
+                    <p>GR CAPITAL,LLC</p>
+                    <p>統編：52573871</p>
+                    <p>代表人：王顥</p>
+                    <p>電話：0989392653</p>
+                    <p>地址：台北市內湖區安康路434巷20弄28號3樓之1 (辦事處裝修中)</p>
+                    <p>3F-1, No. 28, Alley 20, Lane 434, Ankang Road,</p>
+                    <p> Neihu District, Taipei City</p>
+                    <p>核准設立</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="marginTop">
+                    <p><img src="img/line.jpg" alt=""></p>
+                    <p>24小時客服熱線 0989392653</p>
+                    <p>信箱：wyl5896@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function(){
+        const $H = $(window).height();
+        const $W = $(window).width();
+        const row2H = $('.row2').outerHeight();
+        if($H<1000 && 1000<$W){
+            $('.banner').outerHeight($H-row2H);
+        }
+        if($W<1281 && 1000<$W){
+            let h = $('.banner').outerHeight();
+            $('.banner').outerHeight(h-41);
+        }
+    });
+    
+</script>
+</body>
+</html>

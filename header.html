@@ -1,0 +1,131 @@
+<div class="left">
+    <nav>
+        <span></span>
+        <span></span>
+        <span></span>
+    </nav>
+    <a href="index.html"><h1>logo</h1></a>  
+</div>
+<div class="right">
+    <div class="top">
+        <a href="">線上開戶</a>
+        <a href="login.html">會員登入</a>
+        <a >手機版</a>
+    </div>
+    <div class="bottom">
+        <a href="#about">關於環球</a>
+        <a href="#advantage">環球優勢</a>
+        <a href="#business">業務項目</a>
+        <a href="#contact">聯繫我們</a>
+        <p class="hover">
+            下單平台
+            <span class="flex">
+                <a href=""class="img"><img src="img/apple.png" alt=""></a>
+                <a href=""class="img"><img src="img/google.png" alt=""></a>
+            </span>
+        </p>
+    </div>
+</div>
+<div class="menu">
+    <div class="black">
+        <a>線上開戶</a>
+        <a href="login.html">登入</a>
+    </div>
+    <a href="#about">關於環球</a>
+    <a href="#advantage">環球優勢</a>
+    <a href="#business">業務項目</a>
+    <a href="#contact">聯繫我們</a>
+    <a>下單平台</a>
+    <p class="flex">
+        <a href=""class="img"><img src="img/apple.png" alt=""></a>
+        <a href=""class="img"><img src="img/google.png" alt=""></a>
+    </p>
+</div>
+<script>
+$(document).ready(function(){
+    let $H=$(window).height();
+    let $W=$(window).width();
+    $('header .bg').height($H+70);
+
+    //resize   
+   $(window).resize(function(){
+        let $H=$(window).height();
+        let $W=$(window).width();
+        $('header .menu').hide();
+        $('#main').removeClass('sliderDown');
+        $("body").removeClass('menuOpen');
+   });
+
+   //header
+   $(document).scroll(function(){
+        if($(this).scrollTop() > 80){
+            $('header').addClass('scroll');
+        }else{
+            $('header').removeClass('scroll');
+        }
+   });
+
+    /*menu*/
+    $('header nav').click(function(){
+        $('header .menu').slideToggle();
+        $("body").toggleClass('menuOpen');
+        $('#main').toggleClass('sliderDown');
+        $('header').toggleClass('open');
+    });
+    $('header .menu a').click(function(){
+        $('header .menu').slideUp();
+        $("body").removeClass('menuOpen');
+        $('header').removeClass('open');
+    });
+/*app hover*/
+
+$('header .bottom p.hover').hover(function(){
+    $('header .bottom .flex').toggleClass('hover');
+});
+    $('a[href=#about]').click(function () {
+        alert(1);
+            if ($W > 750) {
+                $('html,body').animate({
+                    scrollTop: $('#about').offset().top - 162
+                }, 800);
+            } else {
+                $('html,body').animate({
+                    scrollTop: $('#about').offset().top - 61
+                }, 800);
+            }
+        });
+        $('a[href=#advantage]').click(function () {
+            if ($W > 750) {
+                $('html,body').animate({
+                    scrollTop: $('#advantage').offset().top - 162
+                }, 800);
+            } else {
+                $('html,body').animate({
+                    scrollTop: $('#advantage').offset().top - 61
+                }, 800);
+            }
+        });
+        $('a[href=#business]').click(function () {
+            if ($W > 750) {
+                $('html,body').animate({
+                    scrollTop: $('#business').offset().top - 162
+                }, 800);
+            } else {
+                $('html,body').animate({
+                    scrollTop: $('#business').offset().top - 61
+                }, 800);
+            }
+        });
+        $('a[href=#contact]').click(function () {
+            if ($W > 750) {
+                $('html,body').animate({
+                    scrollTop: $('#contact').offset().top - 162
+                }, 800);
+            } else {
+                $('html,body').animate({
+                    scrollTop: $('#contact').offset().top - 61
+                }, 800);
+            }
+        });
+    });
+</script>
